@@ -1,0 +1,167 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.start-page {
+    height: 100vh;
+    background-color: #73175A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.start-page h1{
+    color: #D9AC59;
+    font-weight: 700;
+    font-size: 3rem;
+    z-index: 6;
+}
+
+.rocket {
+    position: absolute;
+    width: 5%;
+    height: 30%;
+    z-index: 10;
+    animation-name: rocketMove;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;    
+}
+
+@keyframes rocketMove {
+    0%{
+        transform: rotate(85deg);
+        left: -30%;
+    }20%{
+        transform: rotate(95deg);
+        left: 110%;
+    }40%{
+        transform: rotate(5deg);
+        left: 80%;
+        top: 110%;
+    }60%{
+        transform: rotate(-5deg);
+        left: 80%;
+        top: -30%;
+    }80%{
+        transform: rotate(175deg);
+        left: 20%;
+        top: -30%;
+    }100%{
+        transform: rotate(185deg);
+        left: 20%;
+        top: 110%;}
+}
+
+.star {
+    background-color: #D9043D;
+    position: absolute;
+    transition: 0.2s ease all;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 1px #D9043D;
+    margin: 10px;
+}
+
+.star:nth-child(2n){
+    width: 5px;
+    height: 5px;
+}
+
+.star:nth-child(3n){
+    width: 15px;
+    height: 15px;
+}
+
+.star:nth-child(4n){
+    animation-name: glowing;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes glowing {
+    from{
+        box-shadow: 0px 0px 5px 1px #D9043D;
+    }to{
+        box-shadow: 0px 0px 10px 3px #D9043D;
+    }
+}
+
+.star:hover{
+    box-shadow: 0px 0px 20px 10px white;
+    transition: 0.2s ease all;
+}
+
+
+.cloud-circle {
+    width: 540px;
+    height: 320px;
+    filter: url(#filter);
+    animation-name: cloudMove;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-direction: alternate-reverse;
+    border-radius: 50%;
+    position: absolute;
+    top: -320px;
+    left: -320px;
+  }
+
+  @keyframes cloudMove {
+      from{
+        box-shadow: 900px 600px 500px 0px #D9043D
+      }to{
+        box-shadow: 400px 300px 500px 0px #D9043D
+      }
+  }
+
+.earth {
+    background-color: rgb(29, 26, 26);
+    width: 500px;
+    height: 250px;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes glowingButton {
+    from{
+        opacity: 0.5;
+    }to{
+        opacity: 1;
+    }
+}
+
+
+.earth i {
+    color: #D9043D;
+    font-size: 4rem;
+    animation-name: glowingButton;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.earth p {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 70%;
+    top: 55%;
+    font-size: 4rem;
+    color: #F21905;
+}
