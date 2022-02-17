@@ -7,19 +7,36 @@
 
 .start-page {
     height: 100vh;
-    background-color: #73175A;
+    /* background-color: #73175A; */
+    background: rgb(34,33,33);
+    background: radial-gradient(circle, rgba(34,33,33,1) 40%, rgba(115,23,90,1) 100%);  
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    perspective: 1000px;
+}
+
+.test-container {
+    width: 700px;
+    height: 500px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
 }
 
 .start-page h1{
-    color: #D9AC59;
+    color: #D9043D;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 56px;
     z-index: 6;
+    animation-name: glowingButton;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
 }
 
 .rocket {
@@ -155,13 +172,20 @@
     animation-direction: alternate-reverse;
     border-radius: 50%;
     cursor: pointer;
+    z-index: 5;
 }
 
-.earth p {
+.timer {
     position: absolute;
     transform: translate(-50%, -50%);
-    left: 70%;
-    top: 55%;
-    font-size: 4rem;
-    color: #F21905;
+    left: 50%;
+    top: 30%;
+    font-size: 8rem;
+    color: #D9043D;
+    font-weight: 700;
+}
+
+.first-chapter{
+    height: 100vh;
+    background: rgba(34,33,33,1);
 }
