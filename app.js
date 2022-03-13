@@ -4,6 +4,11 @@ const titleContainer = document.querySelector('.title-container');
 const firstChapter = document.querySelector('.first-chapter');
 
 
+// go to the top on refresh/f5
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+
 function titleMove(){
     startPage.addEventListener('mousemove', (e)=>{
         let xAxis = (window.innerWidth / 2 - e.pageX) / 35;
@@ -62,19 +67,15 @@ function countDown(){
             rgba(115,23,90,1) 100%)`;
             blackPrecent += 1;
         },50);
-        // timer and boom
+        // timer and scroll down
         const cntDwn = setInterval(()=>{
             if(timeLeft<=1){
                 clearInterval(cntDwn);
                 timer.remove(timer);
-                const boom = document.createElement('p');
-                boom.classList.add('timer');
-                boom.innerHTML = 'BOOM';
-                startPage.append(boom);
                 setTimeout(()=>{
-                    boom.style.opacity = '0';
-                    boom.style.transition = '1s ease';
-                }, 1500);
+                    firstChapter.scrollIntoView({behavior: 'smooth'});
+                    document.body.style.overflow = 'auto';
+                }, 2500);
             }
             timer.innerHTML = timeLeft - 1;
             timeLeft -= 1;
@@ -82,4 +83,15 @@ function countDown(){
     })
 }
 countDown();
+
+// first chapter
+
+function solarSys() {
+    for(let i=0; i<12; i++){
+        const orbite = document.createElement('div');
+    }
+};
+
+solarSys();
+
 

@@ -5,6 +5,12 @@
     font-family: 'Roboto Mono', monospace;
 }
 
+body {
+    height: 100%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
 .start-page {
     height: 100vh;
     /* background-color: #73175A; */
@@ -16,6 +22,7 @@
     position: relative;
     overflow: hidden;
     perspective: 1000px;
+    overflow-y: hidden;
 }
 
 .test-container {
@@ -185,7 +192,120 @@
     font-weight: 700;
 }
 
+
+/* FIRST CHAPTER */
+
 .first-chapter{
     height: 100vh;
     background: rgba(34,33,33,1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes solarMove {
+    0%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(360deg);
+    }
+}
+
+.sun {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(255, 120, 58);
+}
+
+
+.orbite-one {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    animation: solarMove 15s linear infinite;
+}
+
+.planet {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: grey;
+    top: -10px; /* -child/2 */
+    left: 40px; /* parent/2 - child/2 */
+    animation: solarMove 1s linear infinite;
+}
+
+.satelite {
+    position: absolute;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: grey;
+    top: -2px;
+    left:18px;
+}
+
+.orbite-two {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    animation: solarMove 20s linear infinite;
+}
+
+.planet-two {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: grey;
+    top: -10px; /* -child/2 */
+    left: 190px; /* parent/2 - child/2 */
+    animation: solarMove 3s linear infinite;
+}
+
+.satelite-two {
+    position: absolute;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: grey;
+    top: -2px;
+    left:18px;
+}
+
+.orbite-three {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    animation: solarMove 15s linear infinite;
+}
+
+.planet-three {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: grey;
+    top: -10px; /* -child/2 */
+    left: 140px; /* parent/2 - child/2 */
+    animation: solarMove 3s linear infinite;
+}
+
+.satelite-three {
+    position: absolute;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: grey;
+    top: -2px;
+    left:18px;
 }
