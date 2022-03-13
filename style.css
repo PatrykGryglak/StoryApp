@@ -48,7 +48,7 @@ body {
     height: 30%;
     z-index: 10;
     animation-name: rocketMove;
-    animation-iteration-count: 2;
+    animation-iteration-count: 5;
     animation-duration: 20s;    
 }
 
@@ -58,7 +58,7 @@ body {
         left: -30%;
     }20%{
         transform: rotate(95deg);
-        left: 110%;
+        left: 140%;
     }40%{
         transform: rotate(5deg);
         left: 80%;
@@ -124,8 +124,8 @@ body {
     height: 320px;
     filter: url(#filter);
     animation-name: cloudMove;
-    animation-iteration-count: infinite;
-    animation-duration: 6s;
+    animation-iteration-count: 20;
+    animation-duration: 10s;
     animation-direction: alternate-reverse;
     border-radius: 50%;
     position: absolute;
