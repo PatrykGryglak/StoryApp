@@ -40,10 +40,6 @@ body {
     font-weight: 700;
     font-size: 56px;
     z-index: 6;
-    animation-name: glowingButton;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
 }
 
 .rocket {
@@ -52,7 +48,7 @@ body {
     height: 30%;
     z-index: 10;
     animation-name: rocketMove;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 2;
     animation-duration: 20s;    
 }
 
@@ -102,7 +98,7 @@ body {
     height: 15px;
 }
 
-.star:nth-child(4n){
+.star:nth-child(8n){
     animation-name: glowing;
     animation-iteration-count: infinite;
     animation-duration: 2s;
